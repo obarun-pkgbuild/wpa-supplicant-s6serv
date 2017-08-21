@@ -2,7 +2,7 @@
 
 pkgname=wpa-supplicant-s6serv
 pkgver=0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="wpa-supplicant service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/wpa-supplicant.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/wpa-supplicant/log/run"
-	install -Dm 0644 "$srcdir/wpa-supplicant.logd" "$pkgdir/etc/s6-serv/log.d/serv/wpa-supplicant"
+	install -Dm 0644 "$srcdir/wpa-supplicant.logd" "$pkgdir/etc/s6-serv/log.d/wpa-supplicant"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/wpa-supplicant-s6serv/LICENSE"
 }
